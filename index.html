@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full space-y-6">
+    <h1 class="text-2xl font-bold text-center">Expected Grade Calculator</h1>
+
+    <!-- Internals Input -->
+    <div>
+      <label class="block font-medium mb-1">Internals (out of 60):</label>
+      <input id="internalsInput" type="number" min="0" max="60" value="0"
+             class="w-full border rounded-lg p-2 text-lg" />
+    </div>
+
+    <!-- Externals Slider -->
+    <div>
+      <label class="block font-medium mb-1">Expected Externals (out of 75):</label>
+      <input id="externalsSlider" type="range" min="0" max="75" value="0"
+             class="w-full" />
+      <p class="mt-1 text-gray-600">Selected: <span id="externalsValue">0</span> / 75</p>
+    </div>
+
+    <!-- Result Display -->
+    <div class="bg-gray-50 p-4 rounded-lg text-center space-y-2">
+      <p class="text-lg">Total Marks: <span id="totalMarks">0</span> / 100</p>
+      <p class="text-xl font-bold">Grade: <span id="grade">F</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
